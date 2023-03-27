@@ -1,0 +1,9 @@
+.header {
+    background-color: slategray;
+    height: 100px;
+    color: white;
+}
+
+.headerInput {
+    margin-left: 15px;
+}
