@@ -15,6 +15,7 @@ function App() {
     setColors(colors => [...colors, newColor]);
   }
   
+  
   return (
     <div className="App">
       <Header newColor={newColor}/>

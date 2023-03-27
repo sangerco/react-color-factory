@@ -4,12 +4,16 @@ import './Header.css';
 
 const Header = ({ newColor }) => {
 
+    const [color, setColor] = useState('')
 
     const handleClick = (evt) => {
         evt.preventDefault();
-        console.log(evt);
+        newColor(color);
     }
     
+    const handleChange = (evt) => {
+        setColor(evt.target.value);
+    }
     
 
     return (
@@ -17,7 +21,13 @@ const Header = ({ newColor }) => {
             <>
                 <h3>Welcome to the Color Factory.</h3>
                 <form>
-                    <input className='headerInput' type='text' value={c}></input>
+                    <input 
+                        className='headerInput' 
+                        type='text' 
+                        onChange={handleChange} 
+                        name='color' 
+                        value={color}>
+                    </input>
                     <button onClick={handleClick} >Add new color!</button>
                 </form>
             </>
